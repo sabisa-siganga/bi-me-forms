@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledInput = styled.div`
+    
 	input {
 		width: 100%;
 		border: none;
@@ -8,6 +9,13 @@ export const StyledInput = styled.div`
 		font-weight: 500;
 		height: 30px;
 		font-size: 17px;
+		
+        &:focus{
+			border-bottom-color: #467ee7;
+			~label{
+				color:#467ee7;
+			}
+		}
 	}
 
 	label {
@@ -17,6 +25,19 @@ export const StyledInput = styled.div`
 		color: #858587;
 	}
 
+	&.error{
+		input{
+			border-bottom-color: red;
+			&:focus ~ label{
+				color:red; 
+
+			}
+		}
+		label{
+			color: red;
+		}
+	}
+
 `;
 
 export const StyledError = styled.div`
@@ -24,4 +45,9 @@ color: red;
 padding-top:10px;
 font-size:15px;
 
+
+`
+export const ReversedContainer = styled.div`
+display: flex;
+    flex-direction: column-reverse;
 `
