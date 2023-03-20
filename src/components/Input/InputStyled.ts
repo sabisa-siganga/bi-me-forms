@@ -1,19 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledInput = styled.div`
-    
 	input {
 		width: 100%;
 		border: none;
 		border-bottom: 2px solid #858587;
 		font-weight: 500;
 		height: 30px;
+		font-weight: 400;
 		font-size: 17px;
-		
-        &:focus{
+
+		&:focus {
 			border-bottom-color: #467ee7;
-			~label{
-				color:#467ee7;
+			~ label {
+				color: #467ee7;
 			}
 		}
 	}
@@ -21,33 +21,29 @@ export const StyledInput = styled.div`
 	label {
 		display: block;
 		margin-bottom: 6px;
-		font-size: 18px;
+		font-size: 17px;
 		color: #858587;
 	}
 
-	&.error{
-		input{
+	&.error {
+		input {
 			border-bottom-color: red;
-			&:focus ~ label{
-				color:red; 
-
+			&:focus ~ label {
+				color: red;
 			}
 		}
-		label{
+		label {
 			color: red;
 		}
 	}
-
 `;
 
 export const StyledError = styled.div`
-color: red;
-padding-top:10px;
-font-size:15px;
-
-
-`
+	color: red;
+	padding-top: 10px;
+	font-size: 15px;
+`;
 export const ReversedContainer = styled.div`
-display: flex;
-    flex-direction: column-reverse;
-`
+	display: flex;
+	flex-direction: column-reverse;
+`;

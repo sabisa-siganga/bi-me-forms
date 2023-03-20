@@ -1,21 +1,21 @@
-import React from "react";
-import { StyledError, StyledInput, ReversedContainer } from "./InputStyled";
+import React from 'react';
+import { StyledError, StyledInput, ReversedContainer } from './InputStyled';
 
 interface InputProps {
 	name: string;
-	id:string;
+	id: string;
 	label: string;
 	placeholder: string;
-	type: "text" | "file" | "submit";
+	type: 'text' | 'file' | 'submit';
 	value: string;
-	error?: string;
+	error?: string | boolean;
 	onChange(event: React.ChangeEvent): void;
 	onBlur(event: React.FocusEvent): void;
 }
 
 function Input(props: InputProps) {
 	return (
-		<StyledInput className={props.error? 'error' : ''}>
+		<StyledInput className={props.error ? 'error' : ''}>
 			<ReversedContainer>
 				<input
 					type={props.type}
@@ -31,7 +31,8 @@ function Input(props: InputProps) {
 		</StyledInput>
 	);
 }
- Input.defaultProps={
-	error:undefined,
- }
+
+Input.defaultProps = {
+	error: undefined,
+};
 export default Input;
