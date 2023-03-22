@@ -23,6 +23,7 @@ function Input(props: InputProps) {
 					id={props.id}
 					onChange={props.onChange}
 					onBlur={props.onBlur}
+					placeholder={props.placeholder}
 				/>
 				<label htmlFor={props.id}>{props.label}</label>
 			</ReversedContainer>
