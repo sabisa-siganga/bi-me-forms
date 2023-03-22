@@ -43,7 +43,18 @@ export const StyledError = styled.div`
 	padding-top: 10px;
 	font-size: 15px;
 `;
+
 export const ReversedContainer = styled.div`
 	display: flex;
 	flex-direction: column-reverse;
+	position: relative;
 `;
+
+export const InfoSVG = styled.img`
+	height: 23px;
+	width: 23px;
+	object-fit: contain;
+	position: absolute;
+    right: 1px;
+    bottom: 7px;
+`

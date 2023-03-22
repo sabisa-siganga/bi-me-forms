@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyledError, StyledInput, ReversedContainer } from './InputStyled';
+import { StyledError, StyledInput, ReversedContainer, InfoSVG } from './InputStyled';
+import infoSVG from '../../assets/info.svg'
 
 interface InputProps {
 	name: string;
@@ -25,6 +26,7 @@ function Input(props: InputProps) {
 					onBlur={props.onBlur}
 				/>
 				<label htmlFor={props.id}>{props.label}</label>
+				<InfoSVG src={infoSVG} alt="" />
 			</ReversedContainer>
 
 			{props.error && <StyledError> {props.error}</StyledError>}
